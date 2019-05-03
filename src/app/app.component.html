@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div (window:resize)="onResize($event)">
+  <app-header></app-header>
+        <button (click)="useLanguage('en')">en</button>
+        <button (click)="useLanguage('de')">de</button>
+        <button (click)="useLanguage('ru')">ru</button>
+
+<!--        <div [showOn]="'md lg'">-->
+<!--                <profile-component></profile-component>-->
+<!--        </div>-->
+
+        <parallax-section-component id="target1"></parallax-section-component>
+        <parallax-section-component id="target2></parallax-section-component>
+        <parallax-section-component id="target3></parallax-section-component>
+
+        <app-nav-bar (goUp)='onUp($event)' (goDown)="onDown($event)"></app-nav-bar>
+
+        <app-footer></app-footer>
+        <router-outlet></router-outlet>
+</div>
