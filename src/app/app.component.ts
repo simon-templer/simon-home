@@ -10,6 +10,9 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'simon-home';
+  test = './../../assets/img/back_to_work-wallpaper-1920x1080.jpg';
+  paris = './../../assets/img/paris-wallpaper.jpg';
+  home = './../../assets/img/Professional-resized.jpg';
 
   @ViewChild('divToScroll') divToScroll: ElementRef;
 

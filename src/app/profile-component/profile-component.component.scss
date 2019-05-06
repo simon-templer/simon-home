@@ -1,59 +1,59 @@
-h1 {
-    font-weight: bold;
-    color: #000000;
-    font-size: 46px;
-    text-align:center;
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+section.section:last-child {
+  margin-bottom: 0;
+}
+section.section h2 {
+  margin-bottom: 40px;
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+}
+section.section p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
+}
+section.section p:last-child {
+  margin-bottom: 0;
+}
+section.section.content {
+  padding: 40px 0;
+}
+section.section.parallax {
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+section.section.parallax h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 48px;
+  line-height: 600px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+section.section.parallax-1 {
+  background-image: url("./../../assets/img/paris-wallpaper.jpg");
 }
 
-h2 {
-    width: 100%; 
-    text-align: center; 
-    border-bottom: 1px solid #000; 
-    line-height: 0.1em;
-    margin: 10px 0 20px; 
- } 
- 
- #inner {
-    width: 70%;
-    margin: 0 auto;
+@media all and (min-width: 600px) {
+  section.section h2 {
+    font-size: 42px;
   }
-
- h2 span { 
-     background:#fff; 
-     padding:0 10px; 
- }
-
- hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-img {
-    display: block;
-    max-width:230px;
-    max-height:95px;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0pt;
-    height: auto;
+  section.section p {
+    font-size: 20px;
   }
-
-
-  table{
-    table-layout: fixed;
-    width: 200px;
+  section.section.parallax h1 {
+    font-size: 96px;
+  }
 }
-
-th, td {
-    vertical-align: top;
-    width: 100px;
-}
-
-h4 {
-    text-align: left;
+@media all and (min-width: 960px) {
+  section.section.parallax h1 {
+    font-size: 160px;
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'parallax-section-component',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parallax-section-component.component.scss']
 })
 export class ParallaxSectionComponentComponent implements OnInit {
+  @Input()
+  customImageUrl: string;
+  @Input()
+  title: string;
 
   constructor() { }
 

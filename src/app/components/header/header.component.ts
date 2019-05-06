@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
     this.items = [
       {
         label: 'About Me', command: () => {
-          this.onUp('Profile');
+          this.onUp('profile');
         }
       },
       {
@@ -33,7 +33,12 @@ export class HeaderComponent implements OnInit {
       },
       {
         label: 'Projects'
-      }
+      },
+      {
+        label: 'Contact', command: () => {
+          this.onUp('contact');
+        }
+      },
     ];
   }
 

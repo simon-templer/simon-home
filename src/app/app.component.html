@@ -6,14 +6,16 @@
 <!--                <profile-component></profile-component>-->
 <!--        </div>-->
 
-        <parallax-section-component id="Profile"></parallax-section-component>
-        <parallax-section-component id="target2"></parallax-section-component>
-        <parallax-section-component id="target3"></parallax-section-component>
+        <parallax-section-component id="home" [customImageUrl]="home"></parallax-section-component>
+        <parallax-section-component id="profile" title="Profile" [customImageUrl]="paris"></parallax-section-component>
+        <app-profile-component></app-profile-component>
+        <app-profile-component id="target2"></app-profile-component>
+        <app-profile-component id="target3"></app-profile-component>
 
         <app-nav-bar (goUp)='onUp($event)' (goDown)="onDown($event)"></app-nav-bar>
 
-        <app-contact></app-contact>
-        <parallax-section-component id="target4"></parallax-section-component>
+        <app-contact id="contact"></app-contact>
+        <parallax-section-component [customImageUrl]="test"></parallax-section-component>
         <app-footer></app-footer>
         <router-outlet></router-outlet>
 </div>
