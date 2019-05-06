@@ -26,7 +26,7 @@ import {SplitButtonModule} from 'primeng/splitbutton';
 import {InputTextModule} from 'primeng/inputtext';
 import { ContactComponent } from './components/contact/contact.component';
 import { SocialMediaBarComponent } from './components/contact/social-media-bar/social-media-bar.component';
-import { ExperiencesComponent } from './components/experiences/experiences.component';
+import { ExperiencesOverviewComponent } from './components/experiences-overview/experiences-overview.component';
 
 library.add(faLinkedin);
 
@@ -47,7 +47,7 @@ export function createTranslateLoader(http: HttpClient) {
     TranslationBarComponent,
     ContactComponent,
     SocialMediaBarComponent,
-    ExperiencesComponent,
+    ExperiencesOverviewComponent,
   ],
   imports: [
     TranslateModule.forRoot({
