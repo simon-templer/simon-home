@@ -14,12 +14,10 @@ export class AppComponent {
   @ViewChild('divToScroll') divToScroll: ElementRef;
 
   constructor(private _scrollToService: ScrollToService,
-    private responsiveService: ResponsiveService,
-    private translate: TranslateService) {
-      translate.setDefaultLang('en');
-      translate.use('en');
-    }
-
+    private responsiveService: ResponsiveService, private translate: TranslateService) {
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
 
   ngOnInit () {
     this.responsiveService.getScreenSize().subscribe( isMobile =>{
@@ -33,25 +31,18 @@ export class AppComponent {
   }
 
   onUp() {
-    // this._scrollToService
-    //   .scrollTo({
-    //     target: 'target1'
-    //   })
-    //   .subscribe(
-    //     value => { console.log(value); },
-    //     err => console.error(err) // Error is caught and logged instead of thrown
-    //   );
-console.log("-------------->");
-    this.divToScroll.nativeElement.scrollTop = 30;
+    this._scrollToService
+      .scrollTo({
+        target: 'Profile'
+      })
+      .subscribe(
+        value => { console.log(value); },
+        err => console.error(err) // Error is caught and logged instead of thrown
+      );
   }
 
   onDown() {
   }
-
-  useLanguage(language: string) {
-    this.translate.use(language);
-}
-
 }
 
 

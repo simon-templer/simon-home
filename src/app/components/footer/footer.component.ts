@@ -11,9 +11,4 @@ export class FooterComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  test(){
-    window.location.href="https://www.linkedin.com/in/simon-schmalz-336333102/";
-  }
-
 }

@@ -1,31 +1,16 @@
 footer {
-    background-color: #434242;
-    padding: 40px 180px;
-    text-align: center;
-    color: white;
+  background-color: #434242;
+  color: white;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .test {
-    padding: 20px;
-    color: #B4B3B3;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    white-space:nowrap;
-  }
+  color: #fff345;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+}
 
-.spantest {
-    display: inline-block;
-    vertical-align: middle;
-  }
 
-  .icon {
-    font-size:48px; 
-    color: #B4B3B3
-  }
-  
-  .test:hover {
-    color: white;
-  }
-  
+

@@ -20,6 +20,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { HeaderComponent } from './components/header/header.component';
+import {MenubarModule} from 'primeng/menubar';
+import { TranslationBarComponent } from './components/header/translation-bar/translation-bar.component';
+import {SplitButtonModule} from 'primeng/splitbutton';
+import {InputTextModule} from 'primeng/inputtext';
+import { ContactComponent } from './components/contact/contact.component';
+import { SocialMediaBarComponent } from './components/contact/social-media-bar/social-media-bar.component';
 
 library.add(faLinkedin);
 
@@ -36,7 +42,10 @@ export function createTranslateLoader(http: HttpClient) {
     ProfileComponentComponent,
     ShowOnDirective,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    TranslationBarComponent,
+    ContactComponent,
+    SocialMediaBarComponent,
   ],
   imports: [
     TranslateModule.forRoot({
@@ -54,10 +63,13 @@ export function createTranslateLoader(http: HttpClient) {
     CardModule,
     FieldsetModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MenubarModule,
+    SplitButtonModule,
+    InputTextModule
   ],
   providers: [ResponsiveService],
   bootstrap: [AppComponent],
-  schemas:[NO_ERRORS_SCHEMA]
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class AppModule { }
