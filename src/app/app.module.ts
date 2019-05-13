@@ -26,7 +26,10 @@ import {SplitButtonModule} from 'primeng/splitbutton';
 import {InputTextModule} from 'primeng/inputtext';
 import { ContactComponent } from './components/contact/contact.component';
 import { SocialMediaBarComponent } from './components/contact/social-media-bar/social-media-bar.component';
-import { ExperiencesOverviewComponent } from './components/experiences-overview/experiences-overview.component';
+import {NgsRevealModule} from 'ngx-scrollreveal';
+import { ExpandableBarComponent } from './components/experiences-overview/expandable-bar-list/expandable-bar/expandable-bar.component';
+import {ExperiencesOverviewComponent} from './components/experiences-overview/experiences-overview.component';
+import { ExpandableBarListComponent } from './components/experiences-overview/expandable-bar-list/expandable-bar-list.component';
 
 library.add(faLinkedin);
 
@@ -47,7 +50,9 @@ export function createTranslateLoader(http: HttpClient) {
     TranslationBarComponent,
     ContactComponent,
     SocialMediaBarComponent,
+    ExpandableBarComponent,
     ExperiencesOverviewComponent,
+    ExpandableBarListComponent
   ],
   imports: [
     TranslateModule.forRoot({
@@ -68,7 +73,8 @@ export function createTranslateLoader(http: HttpClient) {
     FontAwesomeModule,
     MenubarModule,
     SplitButtonModule,
-    InputTextModule
+    InputTextModule,
+    NgsRevealModule
   ],
   providers: [ResponsiveService],
   bootstrap: [AppComponent],

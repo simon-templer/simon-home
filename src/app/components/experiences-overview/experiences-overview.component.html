@@ -1,9 +1,4 @@
 <div class="p-grid nested-grid p-justify-center">
-
-   <span>
-          <p-button (click)="toggle()" label="submit"></p-button>
-          </span>
-
   <div class="p-col-8">
     <div class="p-grid">
       <div class="p-col-6">
@@ -15,12 +10,8 @@
         <p>Intellij</p>
       </div>
       <div class="p-col-6 p-justify-start">
-        <div class="box" [@JavaExpandAnimation]="isOpen ? 'expanded' : 'normal'"></div>
-        <div class="box" [@JavaExpandAnimation2]="isOpen ? 'expanded' : 'normal'"></div>
-        <div class="box" [@JavaExpandAnimation3]="isOpen ? 'expanded' : 'normal'"></div>
-        <div class="box" [@JavaExpandAnimation4]="isOpen ? 'expanded' : 'normal'"></div>
-        <div class="box" [@JavaExpandAnimation5]="isOpen ? 'expanded' : 'normal'"></div>
-        <div class="box" [@JavaExpandAnimation6]="isOpen ? 'expanded' : 'normal'"></div>
+
+        <app-expandable-bar-list [barExpandWidths]="barLengths"></app-expandable-bar-list>
       </div>
     </div>
   </div>

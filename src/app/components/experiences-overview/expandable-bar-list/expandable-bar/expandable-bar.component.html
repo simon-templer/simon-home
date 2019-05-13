@@ -1,0 +1,12 @@
+<div class="p-grid p-justify-center">
+  <div class="p-col">
+    <div id="{{id}}" class="box" ngsReveal
+         [@expandCollapse]="{value: expandState, params:{width: barExpandWidth, time: offset}}"
+         (@expandCollapse.done)="animEnd($event)"
+         ></div>
+  </div>
+  <div class="p-col">
+    <p [@FadeIn]="fadInState">100%</p>
+  </div>
+</div>
+

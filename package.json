@@ -30,10 +30,12 @@
     "@ngx-translate/http-loader": "^4.0.0",
     "@nicky-lenaers/ngx-scroll-to": "^1.1.1",
     "core-js": "^2.5.4",
+    "ngx-scrollreveal": "^3.0.0",
     "primeflex": "^1.0.0-rc.1",
     "primeicons": "^1.0.0",
     "primeng": "^7.1.2",
     "rxjs": "~6.3.3",
+    "scrollreveal": "^4.0.5",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
