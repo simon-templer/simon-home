@@ -1,0 +1,33 @@
+[
+  {
+    "year": "01.2019 - ongoing",
+    "title": "New Project",
+    "role": "Fullstack developer",
+    "description": "description will follow"
+  },
+  {
+    "year": "01.2017 - 12.2019",
+    "title": "Telecommunication Industry Project",
+    "role": "Fullstack developer",
+    "description": "New Development of Customer service application. Key Technologies: Angular 7, REST ngrx store, Java,"
+
+  },
+  {
+    "year": "01.2016 - 12.2016",
+    "title": "Transportation Industry Project",
+    "role": "Backend developer",
+    "description": "Development and maintenance of a backend ordering system. Key Technologies: Spring, Spring batch, Java EE, queue architecture "
+  },
+  {
+    "year": "09.2014-09.2015",
+    "title": "Web based document management application",
+    "role": "Developer",
+    "description": "Green field project to develop a document management Solution with E-Signature capabilities. Key Technologies: Spring, Java EE, REST, OAuth2, Swagger"
+  },
+  {
+    "year": "05.2013-12.2015",
+    "title": "E-Signature Solution in Android and Windows Store",
+    "role": "Developer",
+    "description": "New development of a Android and Windows Store app to enable E-Signature capabilities on mobile devices. Key Technologies: Android Java, Windows Store, .net, "
+  }
+]

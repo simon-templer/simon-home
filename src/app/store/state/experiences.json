@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Java",
+    "percentage": 100
+  },
+  {
+    "title": "Angular",
+    "percentage": 75
+  },
+  {
+    "title": "SAFe",
+    "percentage": 80
+  },
+  {
+    "title": "Spring",
+    "percentage": 90
+  },
+  {
+    "title": "iSAQB",
+    "percentage": 80
+  },
+  {
+    "title": "Intellij",
+    "percentage": 100
+  }
+]

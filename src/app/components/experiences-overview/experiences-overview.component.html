@@ -1,18 +1,11 @@
-<div class="p-grid nested-grid p-justify-center">
-  <div class="p-col-8">
-    <div class="p-grid">
-      <div class="p-col-6">
-        <p>Java</p>
-        <p>Angular</p>
-        <p>SAFe</p>
-        <p>Spring</p>
-        <p>iSAQB</p>
-        <p>Intellij</p>
-      </div>
-      <div class="p-col-6 p-justify-start">
-
-        <app-expandable-bar-list [barExpandWidths]="barLengths"></app-expandable-bar-list>
-      </div>
+<div>
+  <div class="p-grid nested-grid p-justify-center">
+    <div class="p-col-8">
+      <app-expandable-bar
+        *ngFor="let experience of experiences | async; let i = index"
+        [id]="'val' + i"
+        [experience] = experience
+        [offset]="'1.5s '+ 200 * i+'ms ease'"></app-expandable-bar>
     </div>
   </div>
 </div>

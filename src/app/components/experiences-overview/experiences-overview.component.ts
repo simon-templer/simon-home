@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {animate, state, style, transition, trigger, useAnimation} from '@angular/animations';
-import {NgsRevealService} from 'ngx-scrollreveal';
+import {AppState} from '../../store/state/app.state';
+import {Store} from '@ngrx/store';
+import {Experience} from '../../store/state/experience';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-experiences-overview',
@@ -10,15 +12,10 @@ import {NgsRevealService} from 'ngx-scrollreveal';
 })
 
 export class ExperiencesOverviewComponent implements OnInit {
+  experiences: Observable<Experience[]>;
 
-  barLengths = [
-    '270px',
-    '210px',
-    '260px',
-    '180px',
-    '300px'];
-
-  constructor() {
+  constructor(private store: Store<AppState>) {
+    this.experiences = store.select('experiences');
   }
 
   ngOnInit() {}

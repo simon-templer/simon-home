@@ -26,13 +26,14 @@ export class HeaderComponent implements OnInit {
         }
       },
       {
-        label: 'What i do'
+        label: 'Skills', command: () => {
+          this.onUp('skills');
+        }
       },
       {
-        label: 'Skills'
-      },
-      {
-        label: 'Projects'
+        label: 'Projects', command: () => {
+          this.onUp('projects');
+        }
       },
       {
         label: 'Contact', command: () => {

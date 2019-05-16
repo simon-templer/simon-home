@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExpandableBarListComponent } from './expandable-bar-list.component';
+import { ProjectsOverviewComponent } from './projects-overview.component';
 
-describe('ExpandableBarListComponent', () => {
-  let component: ExpandableBarListComponent;
-  let fixture: ComponentFixture<ExpandableBarListComponent>;
+describe('ProjectsOverviewComponent', () => {
+  let component: ProjectsOverviewComponent;
+  let fixture: ComponentFixture<ProjectsOverviewComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExpandableBarListComponent ]
+      declarations: [ ProjectsOverviewComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ExpandableBarListComponent);
+    fixture = TestBed.createComponent(ProjectsOverviewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

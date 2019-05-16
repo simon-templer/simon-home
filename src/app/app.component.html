@@ -1,20 +1,23 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div (window:resize)="onResize($event)">
-  <app-header></app-header>
+  <div style="height: 100%">
+    <app-header></app-header>
+  </div>
 
-  <parallax-section-component id="home" [customImageUrl]="home"></parallax-section-component>
-  <parallax-section-component id="profile" title="About me" [customImageUrl]="paris"></parallax-section-component>
-  <app-profile-component></app-profile-component>
-  <parallax-section-component id="Professional" title="Professional" [customImageUrl]="paris"></parallax-section-component>
-  <app-experiences-overview></app-experiences-overview>
-  <parallax-section-component id="Experience" title="Experience" [customImageUrl]="paris"></parallax-section-component>
-  <app-profile-component id="target2"></app-profile-component>
-  <app-profile-component id="target3"></app-profile-component>
 
-  <app-nav-bar (goUp)='onUp($event)' (goDown)="onDown($event)"></app-nav-bar>
+    <parallax-section-component id="home" [customImageUrl]="home"></parallax-section-component>
+    <parallax-section-component id="profile" title="About me" [customImageUrl]="paris"></parallax-section-component>
+    <app-profile-component></app-profile-component>
+    <parallax-section-component id="skills" title="Skills" [customImageUrl]="paris"></parallax-section-component>
+    <app-experiences-overview></app-experiences-overview>
+    <parallax-section-component id="projects" title="Projects" [customImageUrl]="paris"></parallax-section-component>
+    <app-projects-overview></app-projects-overview>
 
-  <app-contact id="contact"></app-contact>
-  <parallax-section-component [customImageUrl]="test"></parallax-section-component>
-  <app-footer></app-footer>
-  <router-outlet></router-outlet>
+    <app-nav-bar (goUp)='onUp($event)' (goDown)="onDown($event)"></app-nav-bar>
+
+    <app-contact id="contact"></app-contact>
+    <parallax-section-component [customImageUrl]="test"></parallax-section-component>
+    <app-footer></app-footer>
+    <router-outlet></router-outlet>
+
 </div>

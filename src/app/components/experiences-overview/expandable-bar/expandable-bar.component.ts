@@ -1,6 +1,7 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
-import {animate, AUTO_STYLE, state, style, transition, trigger} from '@angular/animations';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 import {NgsRevealService} from 'ngx-scrollreveal';
+import {Experience} from '../../../store/state/experience';
 
 @Component({
   selector: 'app-expandable-bar',
@@ -28,9 +29,9 @@ export class ExpandableBarComponent implements OnInit, OnDestroy {
   fadInState = 'out';
   afterRevealSubscription;
 
-  @Input() barExpandWidth: string;
   @Input() id: string;
   @Input() offset: string;
+  @Input() experience: Experience;
 
   constructor(private revealService: NgsRevealService) {
   }

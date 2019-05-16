@@ -1,7 +1,7 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
-import { ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
-import { ResponsiveService } from './services/ResponsiveService';
-import { TranslateService } from '@ngx-translate/core';
+import {ScrollToService} from '@nicky-lenaers/ngx-scroll-to';
+import {ResponsiveService} from './services/ResponsiveService';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -17,14 +17,14 @@ export class AppComponent {
   @ViewChild('divToScroll') divToScroll: ElementRef;
 
   constructor(private _scrollToService: ScrollToService,
-    private responsiveService: ResponsiveService, private translate: TranslateService) {
+              private responsiveService: ResponsiveService, private translate: TranslateService) {
     translate.setDefaultLang('en');
     translate.use('en');
   }
 
-  ngOnInit () {
-    this.responsiveService.getScreenSize().subscribe( isMobile =>{
-        console.log('Mobile size is: ' + isMobile)
+  ngOnInit() {
+    this.responsiveService.getScreenSize().subscribe(isMobile => {
+      console.log('Mobile size is: ' + isMobile);
     });
     this.onResize();
   }
@@ -36,10 +36,12 @@ export class AppComponent {
   onUp() {
     this._scrollToService
       .scrollTo({
-        target: 'Profile'
+        target: 'home'
       })
       .subscribe(
-        value => { console.log(value); },
+        value => {
+          console.log(value);
+        },
         err => console.error(err) // Error is caught and logged instead of thrown
       );
   }

@@ -1,0 +1,63 @@
+<div class="padding image" [style.background-image]="'url(' + customImageUrl + ')'">
+  <div class="p-grid nested-grid">
+    <div class="p-col-5">
+      <div class="custom-flex-grid" [ngsRevealSet]="{duration: 3500, reset: false, viewOffset: { bottom: 200 } }" [ngsSelector]="'.quarter-container'">
+        <div class="quarter-container">
+        </div>
+        <div class="quarter-container">
+         <app-project-summary [project]="projects[0]"></app-project-summary>
+        </div>
+        <div class="quarter-container"></div>
+        <div class="quarter-container">
+          <app-project-summary [project]="projects[1]"></app-project-summary>
+        </div>
+        <div class="quarter-container">
+
+        </div>
+      </div>
+    </div>
+    <div class="p-col-2" [ngsRevealSet]="{ duration: 500, reset: false, viewOffset: { bottom: 100 } }" [ngsSelector]="'.vertical-central-line'">
+      <div class="absolute-vertical-center">
+        <span class="dot"></span>
+      </div>
+      <div class="vertical-central-line"></div>
+      <div class="absolute-vertical-center">
+        <span class="dot"></span>
+      </div>
+      <div class="vertical-central-line"></div>
+      <div class="absolute-vertical-center">
+        <span class="dot"></span>
+      </div>
+      <div class="vertical-central-line"></div>
+      <div class="absolute-vertical-center">
+        <span class="dot"></span>
+      </div>
+      <div class="vertical-central-line"></div>
+      <div class="absolute-vertical-center">
+        <span class="dot"></span>
+      </div>
+      <div class="line-end-space"></div>
+
+    </div>
+    <div class="p-col-5">
+      <div class="custom-flex-grid">
+        <div class="quarter-container">
+          <app-project-summary [project]="projects[2]"></app-project-summary>
+        </div>
+        <div class="quarter-container">
+
+        </div>
+        <div class="quarter-container">
+          <app-project-summary [project]="projects[3]"></app-project-summary>
+        </div>
+        <div class="quarter-container">
+
+        </div>
+        <div class="quarter-container">
+          <app-project-summary [project]="projects[4]"></app-project-summary>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
