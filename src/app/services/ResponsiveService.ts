@@ -1,8 +1,8 @@
 
 // globals.ts
 import { Injectable } from '@angular/core';
-import { ReplaySubject } from "rxjs";
-import { Observable } from "rxjs";
+import { ReplaySubject } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class ResponsiveService {
@@ -21,7 +21,7 @@ export class ResponsiveService {
     }
 
     public checkWidth() {
-        var width = window.innerWidth;
+        const width = window.innerWidth;
         if (width <= 768) {
             this.onMobileChange('xs');
         } else if (width > 768 && width <= 992) {

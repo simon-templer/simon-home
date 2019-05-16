@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div (window:resize)="onResize($event)">
+<div (window:resize)="onResize()">
   <div style="height: 100%">
     <app-header></app-header>
   </div>
@@ -13,7 +13,7 @@
     <parallax-section-component id="projects" title="Projects" [customImageUrl]="paris"></parallax-section-component>
     <app-projects-overview></app-projects-overview>
 
-    <app-nav-bar (goUp)='onUp($event)' (goDown)="onDown($event)"></app-nav-bar>
+    <app-nav-bar (goUp)='onUp()' ></app-nav-bar>
 
     <app-contact id="contact"></app-contact>
     <parallax-section-component [customImageUrl]="test"></parallax-section-component>

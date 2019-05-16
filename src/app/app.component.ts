@@ -45,9 +45,6 @@ export class AppComponent {
         err => console.error(err) // Error is caught and logged instead of thrown
       );
   }
-
-  onDown() {
-  }
 }
 
 
