@@ -11,6 +11,8 @@ export class ProjectSummaryComponent implements OnInit {
 
   @Input()
   project: Project;
+  @Input()
+  textAlignment: String = 'left';
   constructor(private revealService: NgsRevealService) { }
 
   ngOnInit() {

@@ -1,8 +1,12 @@
-p {
+h1, h2, p {
   color: white;
+  margin: 0.5em 0em 0em 0em;
 }
 
-.textbox{
-  width: 20em;
-  text-align: left;
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1em;
 }
