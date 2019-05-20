@@ -2,8 +2,7 @@
   max-width: 100%;
   height: 100%;
   margin: 0 auto;
-  position: relative;
-  text-align: center;
+  display: table;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -26,20 +25,7 @@ section.section.parallax {
   }
 }
 
-
 span {
-  position: relative;
-  top: 50%;
-  text-align: center;
-}
-
-.center {
-  text-align: center;
-  border: 3px solid green;
-}
-
-#parent {display: table;}
-#child {
-  display: table-cell;
   vertical-align: middle;
+  display: table-cell;
 }
