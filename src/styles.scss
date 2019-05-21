@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 * {
-    margin: 0;
- }
+  margin: 0;
+}
 
- html,body {
+html, body {
   height: 100%;
 }
 
@@ -14,5 +14,10 @@ p {
 
 .p-grid {
   margin-right: 0em;
-  margin-left: 0em;}
+  margin-left: 0em;
+}
 
+.padding-top-bottom {
+  padding-top: 8em;
+  padding-bottom: 8em;
+}
