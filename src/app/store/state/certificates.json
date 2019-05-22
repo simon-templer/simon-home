@@ -1,0 +1,43 @@
+[
+  {
+    "order": 1,
+    "year": "2018",
+    "location": "SEI - Stuttgart",
+    "title": "iSAQB Software Architecture Advanced: Module IMPROVE",
+    "image": "./../../assets/img/isaqb_logo.png",
+    "description": "Teilnehmer lernen hier, Softwaresysteme und -architekturen anhand ökonomischer\nund technischer Ziele systematisch und methodisch zu verbessern. Dazu vermitteln\nentsprechende Schulungen die systematische Trennung von Problemen und Lösungsansätzen, das Erarbeiten von kurz-/mittel- und langfristigen Lösungsstrategien sowie\nderen Abgleich mit betriebswirtschaftlichen Zielen und Größen.\nZusätzlich zeigt der IMPROVE-Lehrplan typische Ansätze für Verbesserungen auf, beispielsweise Restrukturierungen und Refactoring, Verbesserungen der Analysierbarkeit, Prozessverbesserung, Verbesserung an technischer Infrastruktur, Verbesserung\nvon Qualitätseigenschaften, etc"
+  },
+  {
+    "order": 2,
+    "year": "2018",
+    "location": "Flowsphere - Zürich",
+    "title": "SAFe Release Train Engineer",
+    "image": "./../../assets/img/flowsphere.png",
+    "description": "In this advanced three-day workshop, you will gain an in-depth understanding of the role and responsibilities of a Release Train Engineer (RTE) in the SAFe enterprise. Through experiential learning, you will learn how to facilitate and enable end-to-end value delivery through Agile Release Trains (ARTs) and value streams.\n\nYou will also learn how to build a high-performing ART by becoming a servant leader and coach, and how to plan and execute a Program Increment (PI) planning event, the primarily enabler of alignment throughout all levels of a SAFe organization.\n\nScaled Agile’s SAFe Release Train Engineer exam maintains rigorous quality standards ensuring that those who have earned the certification are well prepared to effectively fulfill their role in a SAFe enterprise. Make sure to read the Certification Information below."
+  },
+  {
+    "order": 3,
+    "year": "2017",
+    "location": "Scrum.org",
+    "title": "Professional Scrum Master",
+    "image": "./../../assets/img/scrum-org.png",
+    "description": "People who have passed PSM I, achieving certification, demonstrate a fundamental level of Scrum mastery. PSM I certificate holders prove that they understand Scrum as described in the Scrum Guide and how to apply Scrum in Scrum Teams.  PSM I holders have a consistent terminology and approach to Scrum."
+  },
+  {
+    "order": 4,
+    "year": "2017",
+    "location": "SEI - Zürich",
+    "title": "iSAQB Software Architecture Advanced: Modul FLEX",
+    "image": "./../../assets/img/isaqb_logo.png",
+    "description": "FLEX ist ein Advanced Modul der iSAQB Zertifizierung für Software-Architekten (CPSA-A). Anforderungen an Software ändern sich immer schneller - darauf muss die Architektur reagieren können und zukünftigen Anforderungen gewachsen sein. Dieses sehr praxisorientierte Seminar zeigt Ihnen auf, wie Sie flexible, dynamikrobuste Architekturen erstellen können, die ein schnelles Deployment und unmittelbares Feedback aus der Anwendung des Systems erlauben."
+
+  },
+  {
+    "order": 5,
+    "year": "2016",
+    "location": "SEI - Zürich",
+    "title": "iSAQB - Foundation Level",
+    "image": "./../../assets/img/isaqb_logo.png",
+    "description": "In diesem 3-tägigen sehr interaktiven Training erwarten Sie eine fundierte, praxisnahe und pragmatische Einführung in Software Architektur. Der Fokus liegt auf methodischem und systematischem Vorgehen bei Architekturentwurf und -bewertung. Sie lernen das methodische Handwerkszeug erfolgreicher Architekten kennen. Mit einer angeleiteten Kursvorbereitung stellen wir sicher, dass wir während den Kurstagen vorwiegend auf praktische und individuelle Situationen fokussieren können."
+  }
+]
