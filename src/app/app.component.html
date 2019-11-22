@@ -1,22 +1,22 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div (window:resize)="onResize()">
+<div fxLayout="column" (window:resize)="onResize()">
   <app-header></app-header>
-  <parallax-section-component id="home" [customImageUrl]="home"></parallax-section-component>
-  <parallax-section-component id="profile" title="Hello I am Simon"
-                              [customImageUrl]="paris"></parallax-section-component>
+  <app-parallax-section-component id="home" [customImageUrl]="home"></app-parallax-section-component>
+  <app-parallax-section-component id="profile" title="Hello I am Simon"
+                              [customImageUrl]="paris"></app-parallax-section-component>
   <app-profile-component></app-profile-component>
-  <parallax-section-component id="skills" title="Skills" [customImageUrl]="paris"></parallax-section-component>
+  <app-parallax-section-component id="skills" title="Skills" [customImageUrl]="paris"></app-parallax-section-component>
   <app-experiences-overview></app-experiences-overview>
-  <parallax-section-component id="projects" title="Projects" [customImageUrl]="paris"></parallax-section-component>
+  <app-parallax-section-component id="projects" title="Projects" [customImageUrl]="paris"></app-parallax-section-component>
   <app-projects-overview></app-projects-overview>
 
-  <parallax-section-component id="certificates" title="Certificates" [customImageUrl]="paris"></parallax-section-component>
+  <app-parallax-section-component id="certificates" title="Certificates"
+                              [customImageUrl]="paris"></app-parallax-section-component>
   <app-certificate-overview></app-certificate-overview>
   <app-nav-bar (goUp)='onUp()'></app-nav-bar>
 
   <app-contact id="contact"></app-contact>
-  <parallax-section-component [customImageUrl]="test"></parallax-section-component>
+  <app-parallax-section-component [customImageUrl]="test"></app-parallax-section-component>
   <app-footer></app-footer>
   <router-outlet></router-outlet>
-
 </div>

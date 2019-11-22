@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'parallax-section-component',
+  selector: 'app-parallax-section-component',
   templateUrl: './parallax-section-component.component.html',
   styleUrls: ['./parallax-section-component.component.scss']
 })

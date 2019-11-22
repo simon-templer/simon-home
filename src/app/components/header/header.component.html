@@ -1,6 +1,15 @@
-<div class="fixed">
-  <p-menubar [model]="items">
-    <app-translation-bar></app-translation-bar>
-  </p-menubar>
-</div>
+<div fxLayout
+     fxLayoutAlign="left center"
+     fxLayoutGap="0.5em"
+     class="fixed">
+  <div fxLayout fxFlex>
+    <div *ngFor="let item of items">
+      <a mat-button class="highlight" (click)="scrollTo(item.id)">{{item.i18nKey | translate}}</a>
+    </div>
 
+  </div>
+  <div fxLayoutAlign="right center" class="user-profile-container">
+    <app-translation-bar></app-translation-bar>
+  </div>
+
+</div>

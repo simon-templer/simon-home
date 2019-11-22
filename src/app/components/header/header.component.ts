@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {MenuItem} from 'primeng/api';
 import {TranslateService} from '@ngx-translate/core';
 import {ScrollToService} from '@nicky-lenaers/ngx-scroll-to';
+import {MenuItem} from './MenuItem';
 
 @Component({
   selector: 'app-header',
@@ -18,35 +18,36 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     // TODO: translation
-    this.translate.get('Story')
+    this.translate.get('Story');
+
     this.items = [
       {
-        label: 'About Me', command: () => {
-          this.onUp('profile');
-        }
+        id: 'profile',
+        i18nKey: 'header.profile'
       },
       {
-        label: 'Skills', command: () => {
-          this.onUp('skills');
-        }
+        id: 'skills',
+        i18nKey: 'header.skills'
       },
       {
-        label: 'Projects', command: () => {
-          this.onUp('projects');
-        }
+        id: 'projects',
+        i18nKey: 'header.projects'
       },
       {
-        label: 'Contact', command: () => {
-          this.onUp('contact');
-        }
+        id: 'certificates',
+        i18nKey: 'header.certificates'
       },
+      {
+        id: 'contact',
+        i18nKey: 'header.contact'
+      }
     ];
   }
 
-  onUp(target) {
+  scrollTo(id: string) {
     this._scrollToService
       .scrollTo({
-        target: target
+        target: id
       })
       .subscribe(
         value => { console.log(value); },

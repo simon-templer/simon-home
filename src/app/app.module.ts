@@ -34,6 +34,10 @@ import { ProjectsOverviewComponent } from './components/projects-overview/projec
 import { ProjectSummaryComponent } from './components/projects-overview/project-summary/project-summary.component';
 import {reducers} from './store/state/app.state';
 import { CertificateOverviewComponent } from './components/certificate-overview/certificate-overview.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatButtonModule, MatCardModule} from '@angular/material';
+import { LineComponent } from './components/projects-overview/line/line.component';
+import { ProjectRowComponent } from './components/projects-overview/project-row/project-row.component';
 
 library.add(faLinkedin);
 
@@ -59,6 +63,8 @@ export function createTranslateLoader(http: HttpClient) {
     ProjectsOverviewComponent,
     ProjectSummaryComponent,
     CertificateOverviewComponent,
+    LineComponent,
+    ProjectRowComponent,
   ],
   imports: [
     TranslateModule.forRoot({
@@ -81,6 +87,9 @@ export function createTranslateLoader(http: HttpClient) {
     SplitButtonModule,
     InputTextModule,
     NgsRevealModule,
+    FlexLayoutModule,
+    MatButtonModule,
+    MatCardModule,
     StoreModule.forRoot(reducers)
   ],
   providers: [ResponsiveService],
