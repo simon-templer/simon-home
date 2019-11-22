@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Store} from '@ngrx/store';
 import {AppState} from '../../store/state/app.state';
 import {Project} from '../../store/state/project';
-import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 
 @Component({
@@ -15,9 +14,6 @@ export class ProjectsOverviewComponent implements OnInit {
   customImageUrl = '\'./../../assets/img/stars.jpg\'';
 
   constructor(private store: Store<AppState>) {
-    store.select('projects').subscribe(projects => {
-     // this.projects = projects as Project[];
-    });
 
    store.select('projects').pipe(
       map(results => results.sort((a, b) => (a.order > b.order) ? 1 : ((b.order > a.order) ? -1 : 0)))

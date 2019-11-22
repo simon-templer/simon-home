@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { ParallaxSectionComponentComponent } from './components/parallax-section-component/parallax-section-component.component';
-import { ProfileComponentComponent } from './profile-component/profile-component.component';
+import { ProfileComponentComponent } from './components/profile-component/profile-component.component';
 import { ResponsiveService } from './services/ResponsiveService';
 import { ShowOnDirective } from './directives/show-on.directive';
 import { CommonModule } from '@angular/common';
@@ -33,6 +33,7 @@ import {StoreModule} from '@ngrx/store';
 import { ProjectsOverviewComponent } from './components/projects-overview/projects-overview.component';
 import { ProjectSummaryComponent } from './components/projects-overview/project-summary/project-summary.component';
 import {reducers} from './store/state/app.state';
+import { CertificateOverviewComponent } from './components/certificate-overview/certificate-overview.component';
 
 library.add(faLinkedin);
 
@@ -57,6 +58,7 @@ export function createTranslateLoader(http: HttpClient) {
     ExperiencesOverviewComponent,
     ProjectsOverviewComponent,
     ProjectSummaryComponent,
+    CertificateOverviewComponent,
   ],
   imports: [
     TranslateModule.forRoot({

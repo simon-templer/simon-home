@@ -1,6 +1,6 @@
 // Section 2
 import {Action} from '@ngrx/store';
-import {Project} from '../state/project';
+import {Certificate} from '../state/certificate';
 
 export const ADD_CERTIFICATE = '[CERTIFICATE] Add';
 export const REMOVE_CERTIFICATE = '[CERTIFICATE] Remove';
@@ -9,7 +9,7 @@ export const REMOVE_CERTIFICATE = '[CERTIFICATE] Remove';
 export class AddCertificate implements Action {
   readonly type = ADD_CERTIFICATE;
 
-  constructor(public payload: Project) {
+  constructor(public payload: Certificate) {
   }
 }
 
