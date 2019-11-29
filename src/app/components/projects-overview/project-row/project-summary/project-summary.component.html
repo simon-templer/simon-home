@@ -1,0 +1,6 @@
+<div fxLayout="column" fxLayoutGap="0.125em" class="container" [ngStyle]="{'text-align': textAlignment}" [@inOutAnimation] *ngIf="summaryVisible">
+  <div class="subtitle">{{project.year}}</div>
+  <div class="title">{{project.title}}</div>
+  <div class="subtitle">{{project.role}}</div>
+  <div class="description">{{project.description}}</div>
+</div>

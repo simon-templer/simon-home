@@ -1,0 +1,4 @@
+<div fxFlex>
+  <div class="circle"></div>
+  <div id="{{id}}"  class="line" [@animateState]="state" (@animateState.done)="animEnd($event)" [ngsReveal]="{ duration: 0, reset: false, viewOffset: { bottom: 350 } }"></div>
+</div>

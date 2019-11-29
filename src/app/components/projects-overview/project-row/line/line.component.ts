@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {NgsRevealService} from 'ngx-scrollreveal';
+import {ProjectAnimationStateManager} from '../ProjectAnimationStateManager';
 
 @Component({
   selector: 'app-line',
@@ -8,15 +9,15 @@ import {NgsRevealService} from 'ngx-scrollreveal';
   styleUrls: ['./line.component.scss'],
   animations: [
     trigger('animateState', [
-      state('active', style({
+      state('start', style({
         width: '0.5em',
         height: 0
       })),
-      state('inactive', style({
+      state('expanded', style({
         width: '0.5em',
         height: '100%',
       })),
-      transition('* => *', animate(2000))
+      transition('* => *', animate(500))
     ])
   ]
 })
@@ -25,23 +26,21 @@ export class LineComponent implements OnInit {
   @Input() id: string;
   @Output()
   animationDone: EventEmitter<String> = new EventEmitter<String>();
-  public state = 'active';
-  afterRevealSubscription;
+  public state = 'start';
 
-  constructor(private revealService: NgsRevealService) {}
+  constructor(private animationManager: ProjectAnimationStateManager) {}
 
   ngOnInit() {
-    this.afterRevealSubscription = this.revealService.afterReveal$.subscribe(
-      (el: HTMLElement) => {
-        if (this.id === el.id) {
-          console.log(`afterReveal of '<${el.id}>.${el.className}'`);
-          this.state = 'inactive';
-        }
-      });
+
+    this.animationManager.onVisible().subscribe(id => {
+      if (this.id === id) {
+        this.state = 'expanded';
+      }
+    });
   }
 
   animEnd(event) {
-    // only on state expanded is set we want to trigger the fade in of the percentage label
-    this.animationDone.emit(this.id);
+    this.animationManager.informAnimationFinished(this.id, event.toState);
   }
+
 }

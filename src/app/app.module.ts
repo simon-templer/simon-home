@@ -31,13 +31,14 @@ import { ExpandableBarComponent } from './components/experiences-overview/expand
 import {ExperiencesOverviewComponent} from './components/experiences-overview/experiences-overview.component';
 import {StoreModule} from '@ngrx/store';
 import { ProjectsOverviewComponent } from './components/projects-overview/projects-overview.component';
-import { ProjectSummaryComponent } from './components/projects-overview/project-summary/project-summary.component';
+import { ProjectSummaryComponent } from './components/projects-overview/project-row/project-summary/project-summary.component';
 import {reducers} from './store/state/app.state';
 import { CertificateOverviewComponent } from './components/certificate-overview/certificate-overview.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {MatButtonModule, MatCardModule} from '@angular/material';
-import { LineComponent } from './components/projects-overview/line/line.component';
+import {MatButtonModule, MatCardModule, MatFormFieldModule} from '@angular/material';
+import { LineComponent } from './components/projects-overview/project-row/line/line.component';
 import { ProjectRowComponent } from './components/projects-overview/project-row/project-row.component';
+import {ProjectAnimationStateManager} from './components/projects-overview/project-row/ProjectAnimationStateManager';
 
 library.add(faLinkedin);
 
@@ -90,9 +91,11 @@ export function createTranslateLoader(http: HttpClient) {
     FlexLayoutModule,
     MatButtonModule,
     MatCardModule,
+    MatFormFieldModule,
     StoreModule.forRoot(reducers)
   ],
-  providers: [ResponsiveService],
+  providers: [ResponsiveService,
+    ProjectAnimationStateManager],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })

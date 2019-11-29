@@ -1,20 +1,12 @@
 <div fxLayout="row" style="height: 20em">
-
-  <div fxFlex="45" style="border-width: 5px; border-color: green; border-style: solid;">
-    <div [ngsReveal]="{duration: 3500, reset: false, viewOffset: { bottom: 200 } }">
-      <app-project-summary *ngIf="index % 2 == 1" [project]="project" [textAlignment]="'right'"></app-project-summary>
-    </div>
-
+  <div fxFlex="45">
+    <app-project-summary *ngIf="index % 2 == 1" [project]="project" [textAlignment]="'right'"
+                         [lineId]="lineId"></app-project-summary>
   </div>
-    <app-line [id]="'line' + index"></app-line>
-  <div fxFlex="45" style="border-width: 5px; border-color: blue; border-style: solid;">
-
-    <div [ngsReveal]="{duration: 3500, reset: false, viewOffset: { bottom: 200 } }">
-      <app-project-summary *ngIf="index % 2 == 0" [project]="project" [textAlignment]="'left'"
-      ></app-project-summary>
-    </div>
-
+  <app-line id="lineId" [id]="lineId"></app-line>
+  <div fxFlex="45">
+    <app-project-summary *ngIf="index % 2 == 0" [project]="project" [textAlignment]="'left'"
+                         [lineId]="lineId"></app-project-summary>
   </div>
-
 </div>
 
