@@ -1,14 +1,14 @@
-<div class="p-grid p-justify-center">
-  <div class="p-col-2">
+<div fxLayout="row" fxLayoutAlign="center center">
+  <div fxFlex="10">
     <p>{{experience.title}}</p>
   </div>
-  <div class="p-col-8">
+  <div fxFlex>
     <div id="{{id}}" class="box" ngsReveal
          [@expandCollapse]="{value: expandState, params:{width: experience.percentage + '%', time: offset}}"
          (@expandCollapse.done)="animEnd($event)"
          ></div>
   </div>
-  <div class="p-col-2">
+  <div fxFlex="10">
     <p [@FadeIn]="fadInState">{{experience.percentage}}%</p>
   </div>
 </div>

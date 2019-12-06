@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
-import {MenuItem} from 'primeng/api';
 
 @Component({
   selector: 'app-translation-bar',
@@ -9,7 +8,7 @@ import {MenuItem} from 'primeng/api';
 })
 export class TranslationBarComponent implements OnInit {
 
-  items: MenuItem[];
+  items: any;
   language: String;
   constructor(private translate: TranslateService) {
     this.language = translate.currentLang;

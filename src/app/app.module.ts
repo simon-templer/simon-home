@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, NO_ERRORS_SCHEMA, TemplateRef } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
@@ -12,18 +12,13 @@ import { CommonModule } from '@angular/common';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {CardModule} from 'primeng/card';
-import {FieldsetModule} from 'primeng/fieldset';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { HeaderComponent } from './components/header/header.component';
-import {MenubarModule} from 'primeng/menubar';
 import { TranslationBarComponent } from './components/header/translation-bar/translation-bar.component';
-import {SplitButtonModule} from 'primeng/splitbutton';
-import {InputTextModule} from 'primeng/inputtext';
 import { ContactComponent } from './components/contact/contact.component';
 import { SocialMediaBarComponent } from './components/contact/social-media-bar/social-media-bar.component';
 import {NgsRevealModule} from 'ngx-scrollreveal';
@@ -33,12 +28,12 @@ import {StoreModule} from '@ngrx/store';
 import { ProjectsOverviewComponent } from './components/projects-overview/projects-overview.component';
 import { ProjectSummaryComponent } from './components/projects-overview/project-row/project-summary/project-summary.component';
 import {reducers} from './store/state/app.state';
-import { CertificateOverviewComponent } from './components/certificate-overview/certificate-overview.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatButtonModule, MatCardModule, MatFormFieldModule} from '@angular/material';
 import { LineComponent } from './components/projects-overview/project-row/line/line.component';
 import { ProjectRowComponent } from './components/projects-overview/project-row/project-row.component';
 import {ProjectAnimationStateManager} from './components/projects-overview/project-row/ProjectAnimationStateManager';
+import {CertificatesOverviewComponent} from './components/certificates-overview/certificates-overview.component';
 
 library.add(faLinkedin);
 
@@ -63,7 +58,7 @@ export function createTranslateLoader(http: HttpClient) {
     ExperiencesOverviewComponent,
     ProjectsOverviewComponent,
     ProjectSummaryComponent,
-    CertificateOverviewComponent,
+    CertificatesOverviewComponent,
     LineComponent,
     ProjectRowComponent,
   ],
@@ -80,13 +75,8 @@ export function createTranslateLoader(http: HttpClient) {
     HttpClientModule,
     ScrollToModule.forRoot(),
     AppRoutingModule,
-    CardModule,
-    FieldsetModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
-    MenubarModule,
-    SplitButtonModule,
-    InputTextModule,
     NgsRevealModule,
     FlexLayoutModule,
     MatButtonModule,

@@ -1,0 +1,21 @@
+<div class="padding-top-bottom" >
+  <h1 style="text-align: center"> Certificates</h1>
+  <div fxLayout="row wrap">
+    <mat-card style="margin: 2em; padding: 1em" fxFlex="40" *ngFor="let certificate of certificates | async;">
+      <mat-card-header>
+        <mat-card-title>{{certificate.title}}</mat-card-title>
+        <mat-card-subtitle>{{certificate.location}} - {{certificate.year}} </mat-card-subtitle>
+      </mat-card-header>
+      <div fxLayoutAlign="center center">
+        <img  mat-card-image src="{{certificate.image}}" style="width: 80%; height: auto; margin-top: 0.5em">
+      </div>
+      <mat-card-content>
+        <p>{{certificate.description}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+
+
+

@@ -1,44 +1,12 @@
-<footer class="padding-top-bottom">
-  <div>
-    <div class="p-grid p-grid-no-left-right-margin nested-grid p-justify-center">
-      <div class="p-col-8">
-        <div class="p-grid">
-          <div class="p-col-6">
-            <p>Contact</p>
-            <p>I'm a paragraph. Click here to add your own text and edit me. I’m a great place for
-              you to tell a story and let your users know a little more about you.
-            </p>
-            <p>info@mysite.com</p>
-            <p>Tel: 1-800-000-0000</p>
+<footer fxLayout="column" fxLayoutAlign="center center" class="padding-top-bottom">
 
-          </div>
-          <div class="p-col-6">
-        <span class="ui-float-label">
-          <input id="name_input" type="text" size="30" pInputText>
-          <label for="name_input">Name</label>
-        </span>
-
-            <span class="ui-float-label">
-          <input id="email_input" type="text" size="30" pInputText>
-          <label for="email_input">email</label>
-        </span>
-
-            <span class="ui-float-label">
-          <textarea id="description_input" rows="5" cols="30" pInputTextarea></textarea>
-          <label for="description_input">Summary</label>
-        </span>
-            <span>
-          <p-button label="submit"></p-button>
-          </span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
+  <div class="p-col-6" >
+    <p>{{contactData.headerI18n | translate}}</p>
+    <p>{{contactData.descriptionI18n | translate}}</p>
+    <p>{{contactData.email}}</p>
+    <p> {{contactData.phoneNumber}}</p>
   </div>
-
-  <app-social-media-bar></app-social-media-bar>
+  <app-social-media-bar [links]="contactData.links"></app-social-media-bar>
 
 </footer>
 

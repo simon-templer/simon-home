@@ -1,11 +1,14 @@
 {
-    "HELLO": "Hello",
+  "HELLO": "Hello",
   "header": {
     "profile": "About me",
     "skills": "Skills",
     "projects": "Projects",
     "certificates": "Certificates",
     "contact": "Contact"
-
+  },
+  "contact": {
+    "header": "Contact",
+    "description": "I'm a paragraph. Click here to add your own text and edit me. I’m a great place for\n you to tell a story and let your users know a little more about you."
   }
 }

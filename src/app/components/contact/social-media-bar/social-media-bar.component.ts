@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {faLinkedinIn, faXingSquare} from '@fortawesome/free-brands-svg-icons';
+import {ILink} from '../link.interface';
 
 @Component({
   selector: 'app-social-media-bar',
@@ -10,6 +11,9 @@ export class SocialMediaBarComponent implements OnInit {
 
   faXing = faXingSquare;
   faLinkedIn = faLinkedinIn;
+
+  @Input()
+  links: ILink[];
 
   constructor() { }
 
