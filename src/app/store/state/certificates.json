@@ -30,7 +30,6 @@
     "title": "iSAQB Software Architecture Advanced: Modul FLEX",
     "image": "./../../assets/img/isaqb_logo.png",
     "description": "FLEX ist ein Advanced Modul der iSAQB Zertifizierung für Software-Architekten (CPSA-A). Anforderungen an Software ändern sich immer schneller - darauf muss die Architektur reagieren können und zukünftigen Anforderungen gewachsen sein. Dieses sehr praxisorientierte Seminar zeigt Ihnen auf, wie Sie flexible, dynamikrobuste Architekturen erstellen können, die ein schnelles Deployment und unmittelbares Feedback aus der Anwendung des Systems erlauben."
-
   },
   {
     "order": 5,
@@ -38,6 +37,22 @@
     "location": "SEI - Zürich",
     "title": "iSAQB - Foundation Level",
     "image": "./../../assets/img/isaqb_logo.png",
+    "description": "In diesem 3-tägigen sehr interaktiven Training erwarten Sie eine fundierte, praxisnahe und pragmatische Einführung in Software Architektur. Der Fokus liegt auf methodischem und systematischem Vorgehen bei Architekturentwurf und -bewertung. Sie lernen das methodische Handwerkszeug erfolgreicher Architekten kennen. Mit einer angeleiteten Kursvorbereitung stellen wir sicher, dass wir während den Kurstagen vorwiegend auf praktische und individuelle Situationen fokussieren können."
+  },
+  {
+    "order": 6,
+    "year": "2017",
+    "location": "The Code Campus - Stuttgart",
+    "title": "Angular Certification",
+    "image": "./../../assets/img/code-campus-icon.png",
+    "description": "In der Angular Schulung wird den Teilnehmern die Grundlage für einen schnellen Start in den Produktiveinsatz vermittelt. Anhand praktischer Beispiele lernen Sie zunächst die notwendigen TypeScript Grundlagen kennen. Anschließend lernen Sie die wichtigsten Konzepte von Angular kennen, theoretisch wie praktisch.\n\nAuf die Erklärung eines Konzepts folgt die Übung anhand einer Anwendung, die uns die ganze Schulung über begleitet. So kann jeder Teilnehmer mit seinem Code arbeiten und das gerade gelernte direkt umsetzten.\n\nNach dem Workshop kennen Sie die grundlegenen Konzepte von Angular. Sie sind in der Lage in komplexen Angular Anwendungen mitzuarbeiten. Dazu haben Sie die Grundlage geschaffen, sich tiefer in Angular einzuarbeiten."
+  },
+  {
+    "order": 7,
+    "year": "2019",
+    "location": "Integrata CEGOS - Stuttgart",
+    "title": "iSAQB - SOFT",
+    "image": "./../../assets/img/Logo-Integrata-Cegos.png",
     "description": "In diesem 3-tägigen sehr interaktiven Training erwarten Sie eine fundierte, praxisnahe und pragmatische Einführung in Software Architektur. Der Fokus liegt auf methodischem und systematischem Vorgehen bei Architekturentwurf und -bewertung. Sie lernen das methodische Handwerkszeug erfolgreicher Architekten kennen. Mit einer angeleiteten Kursvorbereitung stellen wir sicher, dass wir während den Kurstagen vorwiegend auf praktische und individuelle Situationen fokussieren können."
   }
 ]
