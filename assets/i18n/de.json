@@ -1,0 +1,11 @@
+{
+  "HELLO": "Hallo",
+  "header": {
+    "profile": "Über mich",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte",
+    "certificates": "Zertifikate",
+    "contact": "kontakt"
+
+  }
+}
