@@ -1,24 +1,22 @@
-// Section 2
 import {Action} from '@ngrx/store';
-import {Project} from '../state/project';
+import {Project} from '../model/project';
 
-export const ADD_PROJECT = '[PROJECT] Add';
-export const REMOVE_PROJECT = '[PROJECT] Remove';
+export enum EProjectActions {
+  GetProjects = '[Project] Get Projects',
+  GetProjectsSuccess = '[Project] Get Projects Success',
+}
 
-// Section 3
-export class AddProject implements Action {
-  readonly type = ADD_PROJECT;
+export class GetProjects implements Action {
+  readonly type = EProjectActions.GetProjects;
 
-  constructor(public payload: Project) {
+  constructor() {
   }
 }
 
-export class RemoveProject implements Action {
-  readonly type = REMOVE_PROJECT;
-
-  constructor(public payload: number) {
-  }
+export class GetProjectsSuccess implements Action {
+  public readonly type = EProjectActions.GetProjectsSuccess;
+  constructor(public payload: Project[]) {}
 }
 
-// Section 4
-export type Actions = AddProject | RemoveProject;
+
+export type ProjectActions = GetProjects | GetProjectsSuccess;

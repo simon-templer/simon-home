@@ -2,6 +2,9 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
 import {ScrollToService} from '@nicky-lenaers/ngx-scroll-to';
 import {ResponsiveService} from './services/ResponsiveService';
 import {TranslateService} from '@ngx-translate/core';
+import {Store} from "@ngrx/store";
+import {AppState} from "./store/state/app.state";
+import {UpdateFullPageApi, UpdateFullPageState} from "./store/actions/full-page.actions";
 
 @Component({
   selector: 'app-root',
@@ -10,16 +13,33 @@ import {TranslateService} from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'simon-home';
-  test = './../../assets/img/back_to_work-wallpaper-1920x1080.jpg';
-  paris = './../../assets/img/paris-wallpaper.jpg';
-  home = './../../assets/img/Professional-resized.jpg';
+  home = '../../../assets/img/Professional-resized.jpg';
+
+  config: any;
+  fullpage_api: any;
 
   @ViewChild('divToScroll') divToScroll: ElementRef;
 
   constructor(private _scrollToService: ScrollToService,
+              private store: Store<AppState>,
               private responsiveService: ResponsiveService, private translate: TranslateService) {
     translate.setDefaultLang('en');
     translate.use('en');
+
+    this.config = {
+      licenseKey: 'YOUR LICENSE KEY HERE',
+      anchors: ['home', 'profile', 'skills', 'projects', 'certificates', 'contact', 'footer'],
+      menu: '#menu',
+      navigation: true,
+      afterLoad: (origin, destination, direction) => {
+        this.store.dispatch(new UpdateFullPageState({destination: destination.anchor, direction: direction.anchor, origin: origin}))
+      }
+    };
+  }
+
+  getRef(fullPageRef) {
+    this.fullpage_api = fullPageRef;
+    this.store.dispatch(new UpdateFullPageApi(this.fullpage_api))
   }
 
   ngOnInit() {
@@ -31,19 +51,6 @@ export class AppComponent {
 
   onResize() {
     this.responsiveService.checkWidth();
-  }
-
-  onUp() {
-    this._scrollToService
-      .scrollTo({
-        target: 'home'
-      })
-      .subscribe(
-        value => {
-          console.log(value);
-        },
-        err => console.error(err) // Error is caught and logged instead of thrown
-      );
   }
 }
 

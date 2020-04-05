@@ -3,7 +3,7 @@
     <p>{{experience.title}}</p>
   </div>
   <div fxFlex>
-    <div id="{{id}}" class="box" ngsReveal
+    <div  class="box"
          [@expandCollapse]="{value: expandState, params:{width: experience.percentage + '%', time: offset}}"
          (@expandCollapse.done)="animEnd($event)"
          ></div>

@@ -1,19 +1,22 @@
-import {Experience} from './experience';
-import {Project} from './project';
-import {experienceReducer} from '../reducer/experience-reducer';
-import {projectReducer} from '../reducer/project-reducer';
-import {ActionReducerMap} from '@ngrx/store';
-import {Certificate} from './certificate';
-import {certificateReducer} from '../reducer/certificate-reducer';
+import {initiaProjectState, IProjectState} from "./IProjectState";
+import {IExperienceState, initialExperienceState} from "./IExperienceState";
+import {ICertificateState, initialCertificateState} from "./ICertificateState";
+import {IFullPageState, initiaFullPageState} from "./IFullPagetState";
 
 export interface AppState {
-  readonly experiences: Experience[];
-  readonly projects: Project[];
-  readonly certificates: Certificate[];
+  readonly experiences: IExperienceState;
+  readonly projects: IProjectState;
+  readonly certificates: ICertificateState;
+  readonly fullPageState: IFullPageState;
 }
 
-export const reducers: ActionReducerMap<AppState> = {
-  experiences: experienceReducer,
-  projects: projectReducer,
-  certificates: certificateReducer
+export const initialAppState: AppState = {
+  projects: initiaProjectState,
+  certificates: initialCertificateState,
+  experiences: initialExperienceState,
+  fullPageState: initiaFullPageState
 };
+
+export function getInitialState(): AppState {
+  return initialAppState;
+}

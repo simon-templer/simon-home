@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Project} from '../../../../store/state/project';
+import {Project} from '../../../../store/model/project';
 import {animate, style, transition, trigger} from '@angular/animations';
 import {ProjectAnimationStateManager} from '../ProjectAnimationStateManager';
 

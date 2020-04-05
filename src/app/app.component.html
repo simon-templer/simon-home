@@ -1,22 +1,18 @@
+
 <!--The content below is only a placeholder and can be replaced.-->
 <div fxLayout="column" (window:resize)="onResize()">
+
   <app-header></app-header>
-  <app-parallax-section-component id="home" [customImageUrl]="home"></app-parallax-section-component>
-  <app-parallax-section-component id="profile" title="Hello I am Simon"
-                              [customImageUrl]="paris"></app-parallax-section-component>
-  <app-profile-component></app-profile-component>
-  <app-parallax-section-component id="skills" title="Skills" [customImageUrl]="paris"></app-parallax-section-component>
-  <app-experiences-overview></app-experiences-overview>
-  <app-parallax-section-component id="projects" title="Projects" [customImageUrl]="paris"></app-parallax-section-component>
-  <app-projects-overview></app-projects-overview>
 
-  <app-parallax-section-component id="certificates" title="Certificates"
-                              [customImageUrl]="paris"></app-parallax-section-component>
-  <app-certificates-overview></app-certificates-overview>
-  <app-nav-bar (goUp)='onUp()'></app-nav-bar>
+  <div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
+    <app-home class="section" [customImageUrl]="home" ></app-home>
+    <app-profile-component class="section"></app-profile-component>
+    <app-experiences-overview class="section"></app-experiences-overview>
+    <app-projects-overview class="section"></app-projects-overview>
+    <app-certificates-overview class="section"></app-certificates-overview>
+    <app-contact class="section"></app-contact>
 
-  <app-contact id="contact"></app-contact>
-  <app-parallax-section-component [customImageUrl]="test"></app-parallax-section-component>
-  <app-footer></app-footer>
+  </div>
+  <app-footer class="section"></app-footer>
   <router-outlet></router-outlet>
 </div>

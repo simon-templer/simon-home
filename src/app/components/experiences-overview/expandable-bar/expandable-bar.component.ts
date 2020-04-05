@@ -1,7 +1,9 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import {NgsRevealService} from 'ngx-scrollreveal';
-import {Experience} from '../../../store/state/experience';
+import {Experience} from '../../../store/model/experience';
+import {select, Store} from "@ngrx/store";
+import {AppState} from "../../../store/state/app.state";
+import {selectFullPageState} from "../../../store/selectors/full-page.selectors";
 
 @Component({
   selector: 'app-expandable-bar',
@@ -24,27 +26,24 @@ import {Experience} from '../../../store/state/experience';
     ])
   ]
 })
-export class ExpandableBarComponent implements OnInit, OnDestroy {
+export class ExpandableBarComponent implements OnInit {
   expandState = 'normal';
   fadInState = 'out';
-  afterRevealSubscription;
+  fullPageStateObservable = this.store.pipe(select(selectFullPageState));
 
   @Input() id: string;
   @Input() offset: string;
   @Input() experience: Experience;
 
-  constructor(private revealService: NgsRevealService) {
+  constructor( private store: Store<AppState>) {
   }
 
   ngOnInit() {
-
-    this.afterRevealSubscription = this.revealService.afterReveal$.subscribe(
-      (el: HTMLElement) => {
-        if (this.id === el.id) {
-          console.log(`afterReveal of '<${el.id}>.${el.className}'`);
-          this.expandState = 'expanded';
-        }
-      });
+    this.fullPageStateObservable.subscribe(fullPageState => {
+      if (fullPageState && fullPageState.destination == 'skills'){
+        this.expandState = 'expanded';
+      }
+    })
   }
 
   animEnd(event) {
@@ -52,10 +51,6 @@ export class ExpandableBarComponent implements OnInit, OnDestroy {
     if (event.toState === 'expanded') {
       this.fadInState = 'in';
     }
-  }
-
-  ngOnDestroy() {
-    this.afterRevealSubscription.unsubscribe();
   }
 
 }

@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {Store} from '@ngrx/store';
+import {select, Store} from '@ngrx/store';
 import {AppState} from '../../store/state/app.state';
-import {Project} from '../../store/state/project';
+import {Project} from '../../store/model/project';
 import {map} from 'rxjs/operators';
+import {selectProjects} from "../../store/selectors/project.selectors";
 
 @Component({
   selector: 'app-projects-overview',
@@ -15,7 +16,7 @@ export class ProjectsOverviewComponent implements OnInit {
 
   constructor(private store: Store<AppState>) {
 
-   store.select('projects').pipe(
+    store.pipe(select(selectProjects)).pipe(
       map(results => results.sort((a, b) => (a.order > b.order) ? 1 : ((b.order > a.order) ? -1 : 0)))
     ).subscribe(
       projects => {

@@ -1,6 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import {NgsRevealService} from 'ngx-scrollreveal';
 import {ProjectAnimationStateManager} from '../ProjectAnimationStateManager';
 
 @Component({

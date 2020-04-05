@@ -1,24 +1,22 @@
-// Section 2
 import {Action} from '@ngrx/store';
-import {Experience} from '../state/experience';
+import {Experience} from '../model/experience';
 
-export const ADD_EXPERIENCE = '[TUTORIAL] Add';
-export const REMOVE_EXPERIENCE = '[TUTORIAL] Remove';
+export enum EExperienceActions {
+  GetExperiences = '[Experience] Get Experiences',
+  GetExperiencesSuccess = '[Experience] Get Experiences Success',
+}
 
-// Section 3
-export class AddExperience implements Action {
-  readonly type = ADD_EXPERIENCE;
+export class GetExperiences implements Action {
+  readonly type = EExperienceActions.GetExperiences;
 
-  constructor(public payload: Experience) {
+  constructor() {
   }
 }
 
-export class RemoveExperience implements Action {
-  readonly type = REMOVE_EXPERIENCE;
-
-  constructor(public payload: number) {
-  }
+export class GetExperiencesSuccess implements Action {
+  public readonly type = EExperienceActions.GetExperiencesSuccess;
+  constructor(public payload: Experience[]) {}
 }
 
-// Section 4
-export type Actions = AddExperience | RemoveExperience;
+
+export type ExperienceActions = GetExperiences | GetExperiencesSuccess;
