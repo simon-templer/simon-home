@@ -2,9 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {NavBarComponent} from './components/nav-bar/nav-bar.component';
 import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
-import {ParallaxSectionComponentComponent} from './components/parallax-section-component/parallax-section-component.component';
 import {ProfileComponentComponent} from './components/profile-component/profile-component.component';
 import {ResponsiveService} from './services/ResponsiveService';
 import {ShowOnDirective} from './directives/show-on.directive';
@@ -47,8 +45,6 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
-    ParallaxSectionComponentComponent,
     ProfileComponentComponent,
     ShowOnDirective,
     FooterComponent,
