@@ -1,0 +1,31 @@
+.container {
+  max-width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: table;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+test {
+  height: 100vh;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("../../../assets/img/Professional-resized.jpg");
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+span {
+  vertical-align: middle;
+  display: table-cell;
+}
