@@ -32,7 +32,7 @@ export class AppComponent {
       menu: '#menu',
       navigation: true,
       afterLoad: (origin, destination, direction) => {
-        this.store.dispatch(new UpdateFullPageState({destination: destination.anchor, direction: direction.anchor, origin: origin}))
+        this.store.dispatch(new UpdateFullPageState({destination: destination.anchor, direction: direction, origin: origin.anchor}))
       }
     };
   }
