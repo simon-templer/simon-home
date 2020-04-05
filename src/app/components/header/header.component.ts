@@ -1,20 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
-import {ScrollToService} from '@nicky-lenaers/ngx-scroll-to';
 import {MenuItem} from './MenuItem';
 import {select, Store} from "@ngrx/store";
 import {AppState} from "../../store/state/app.state";
-import {selectFullPageApi} from "../../store/selectors/full-page.selectors";
+import {selectFullPageApi, selectFullPageState} from "../../store/selectors/full-page.selectors";
+import {animate, state, style, transition, trigger} from "@angular/animations";
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  animations: [
+    trigger('greenState', [
+      state('true', style({ opacity: '1', background: '#2DA99D'})),
+      state('false', style({opacity: '1', background: 'transparent'})),
+      transition('void => *', animate(0)), // <-- This is the relevant bit
+      transition('* => *', animate('250ms ease-in-out'))
+    ])
+  ]
 })
 export class HeaderComponent implements OnInit {
 
-  fullPageApiObservablr = this.store.pipe(select(selectFullPageApi));
+  fullPageApiObservable = this.store.pipe(select(selectFullPageApi));
   private fullPageApi: any;
+  greenState:boolean;
+  fullPageStateObservable = this.store.pipe(select(selectFullPageState));
+
+  // TODO: translation
   items: MenuItem[] = [
     {
       id: 'profile',
@@ -43,15 +55,23 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    // TODO: translation
-    this.translate.get('Story');
-
-    this.fullPageApiObservablr.subscribe(api =>{
+    this.fullPageApiObservable.subscribe(api =>{
       this.fullPageApi = api
-    } )
+    } );
+
+    this.fullPageStateObservable.subscribe(fullPageState =>{
+      if (fullPageState && fullPageState.destination == 'home'){
+        this.greenState = false;
+      } else {
+        this.greenState = true;
+      }
+    } );
+
+    this.greenState=false;
+
   }
 
-  scrollTo(id: string) {
+  moveTo(id: string) {
     if (this.fullPageApi){
       this.fullPageApi.moveTo(id);
     }
