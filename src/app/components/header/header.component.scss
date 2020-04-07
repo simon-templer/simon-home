@@ -10,10 +10,16 @@
 }
 
 .logo {
-  width: 10em;
+  width: 30em;
   height: 5em;
-  background-image: url("../../../assets/img/konoto-logo.png");
+  background-image: url("../../../assets/img/black_logo.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+}
+
+img {
+  height: 3em;
+  width: auto;
+  display: block;
 }

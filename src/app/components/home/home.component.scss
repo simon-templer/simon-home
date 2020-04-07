@@ -6,26 +6,24 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-test {
-  height: 100vh;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
 .bg {
-  /* The image used */
   background-image: url("../../../assets/img/Professional-resized.jpg");
-  /* Full height */
   height: 100%;
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-span {
-  vertical-align: middle;
-  display: table-cell;
+.grey {
+  background:rgba(1,1,1,0.5);
+  height: 100%;
+}
+
+.test {
+  background: #1BA195;
+  width: 60%;
+  height: 10%;
+  align-self: start;
+  display: inline-block;
+  padding: 1em;
 }

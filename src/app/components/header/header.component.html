@@ -1,15 +1,16 @@
-<ng-container  @parent>
+<ng-container @parent>
   <div fxLayout
        fxLayoutAlign="left center"
        fxLayoutGap="0.5em"
        class="fixed"
        [@greenState]="greenState">
-    <div>
-      <div class="logo"></div>
-    </div>
+
+    <img *ngIf="greenState == false" src="../../../assets/img/black_logo.svg" alt="Smiley face">
+    <img *ngIf="greenState == true" src="../../../assets/img/white_logo.svg" alt="Smiley face">
+
     <div fxLayout fxFlex fxLayoutAlign="center center">
       <div *ngFor="let item of items">
-        <a mat-button class="highlight" (click)="moveTo(item.id)">{{item.i18nKey | translate}}</a>
+        <a mat-button (click)="moveTo(item.id)">{{item.i18nKey | translate}}</a>
       </div>
 
     </div>

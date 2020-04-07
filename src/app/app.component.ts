@@ -28,7 +28,7 @@ export class AppComponent {
 
     this.config = {
       licenseKey: 'YOUR LICENSE KEY HERE',
-      anchors: ['home', 'profile', 'skills', 'projects', 'certificates', 'contact', 'footer'],
+      anchors: ['home', 'skills', 'projects', 'certificates', 'contact', 'footer'],
       menu: '#menu',
       navigation: true,
       afterLoad: (origin, destination, direction) => {
