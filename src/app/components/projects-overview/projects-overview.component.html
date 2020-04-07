@@ -1,3 +1,6 @@
-<div fxLayout="column" [style.background-image]="'url(' + customImageUrl + ')'" class="padding-top-bottom">
-  <app-project-row *ngFor="let project of projects; let index = index" [project]="project" [index]="index"></app-project-row>
+<div fxLayout="column"  style="height: 80%; width: 70%; margin: auto">
+  <app-project-row fxFlex="20" *ngFor="let project of projects; let index = index" [project]="project" [index]="index"></app-project-row>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <div class="line-in-middle"></div>
+  </div>
 </div>

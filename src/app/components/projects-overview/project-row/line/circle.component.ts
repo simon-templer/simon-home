@@ -4,23 +4,21 @@ import {ProjectAnimationStateManager} from '../ProjectAnimationStateManager';
 
 @Component({
   selector: 'app-line',
-  templateUrl: './line.component.html',
-  styleUrls: ['./line.component.scss'],
+  templateUrl: './circle.component.html',
+  styleUrls: ['./circle.component.scss'],
   animations: [
     trigger('animateState', [
       state('start', style({
-        width: '0.5em',
-        height: 0
+        opacity: 0
       })),
       state('expanded', style({
-        width: '0.5em',
-        height: '100%',
+        opacity: 1
       })),
       transition('* => *', animate(500))
     ])
   ]
 })
-export class LineComponent implements OnInit {
+export class CircleComponent implements OnInit {
 
   @Input() id: string;
   @Output()

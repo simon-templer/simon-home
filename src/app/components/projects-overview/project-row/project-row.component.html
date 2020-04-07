@@ -1,12 +1,10 @@
-<div fxLayout="row" style="height: 20em">
-  <div fxFlex="45">
-    <app-project-summary *ngIf="index % 2 == 1" [project]="project" [textAlignment]="'right'"
-                         [lineId]="lineId"></app-project-summary>
+<div fxLayout="row" fxFlex="100" fxLayoutAlign="center stretch">
+  <div fxLayout="column" fxFlex="40" [@inOutAnimation]="state">
+    <h3 class="yearText" [ngStyle]="{'text-align': 'right'}" >{{project.year}}</h3>
+    <div class="roleText" [ngStyle]="{'text-align': 'right'}">{{project.role}}</div>
   </div>
-  <app-line id="lineId" [id]="lineId"></app-line>
-  <div fxFlex="45">
-    <app-project-summary *ngIf="index % 2 == 0" [project]="project" [textAlignment]="'left'"
-                         [lineId]="lineId"></app-project-summary>
+  <div fxFlex="10" fxLayoutAlign="space-evenly stretch">
+    <app-line id="lineId" [id]="lineId"></app-line>
   </div>
+  <app-project-summary  [project]="project" [textAlignment]="'left'" [lineId]="lineId" fxFlex="40"></app-project-summary>
 </div>
-

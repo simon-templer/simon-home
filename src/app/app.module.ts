@@ -27,7 +27,7 @@ import {ProjectsOverviewComponent} from './components/projects-overview/projects
 import {ProjectSummaryComponent} from './components/projects-overview/project-row/project-summary/project-summary.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatButtonModule, MatCardModule, MatFormFieldModule} from '@angular/material';
-import {LineComponent} from './components/projects-overview/project-row/line/line.component';
+import {CircleComponent} from './components/projects-overview/project-row/line/circle.component';
 import {ProjectRowComponent} from './components/projects-overview/project-row/project-row.component';
 import {ProjectAnimationStateManager} from './components/projects-overview/project-row/ProjectAnimationStateManager';
 import {CertificatesOverviewComponent} from './components/certificates-overview/certificates-overview.component';
@@ -57,7 +57,7 @@ export function createTranslateLoader(http: HttpClient) {
     ProjectsOverviewComponent,
     ProjectSummaryComponent,
     CertificatesOverviewComponent,
-    LineComponent,
+    CircleComponent,
     ProjectRowComponent,
     HomeComponent,
   ],

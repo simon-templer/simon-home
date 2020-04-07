@@ -1,35 +1,24 @@
-.absolute-vertical-center{
+
+.circle {
+  height:1em;
+  width: 1em;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.line-in-middle {
   position: absolute;
+  top: 50%;
   left: 50%;
-}
-
-
-
-.vertical-central-line {
-  border-left: 6px solid white;
-  height: 20em;
-  position: relative;
-  left: 50%;
-  margin-left: -3px;
-  margin-top: 0.5em;
-  margin-bottom: -0.5em;
-}
-//.line-end-space {
-//  height: 20em;
-//  position: relative;
-//}
-
-.custom-flex-grid {
-  display: flex;
-  flex-flow: column;
-  height: 100%;
-}
-
-.twenty-percent-container {
-  flex: 0 0 100%;
-  max-height: 20%;
-  min-height: 20%;
-  max-width: 100%;
-  padding: .5em;
-  overflow: hidden;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  width: 1em;
+  background: linear-gradient(to right,
+    transparent 0%,
+    transparent calc(50% - 0.81px),
+    #bbb calc(50% - 0.8px),
+    #bbb calc(50% + 0.8px),
+    transparent calc(50% + 0.81px),
+    transparent 100%);
 }

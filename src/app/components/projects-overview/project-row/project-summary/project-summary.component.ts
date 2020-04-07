@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Project} from '../../../../store/model/project';
-import {animate, style, transition, trigger} from '@angular/animations';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 import {ProjectAnimationStateManager} from '../ProjectAnimationStateManager';
 
 @Component({
@@ -9,14 +9,15 @@ import {ProjectAnimationStateManager} from '../ProjectAnimationStateManager';
   styleUrls: ['./project-summary.component.scss'],
   animations: [
     trigger('inOutAnimation', [
-      transition(':enter', [
-        style({ height: 0, opacity: 0 }),
-        animate('1s ease-out', style({ height: 300, opacity: 1 }))
-      ]),
-      transition(':leave', [
-        style({ height: 300, opacity: 1 }),
-        animate('1s ease-in', style({ height: 0, opacity: 0 }))
-      ])
+      state('start', style({
+        opacity: 0,
+      })),
+      state('expanded', style({
+        opacity: 1,
+        transform: 'translateX(-10px)'
+      })),
+      transition('void => *', animate(0)), // <-- This is the relevant bit
+      transition('* => *', animate(750))
     ])
   ]
 })
@@ -28,7 +29,7 @@ export class ProjectSummaryComponent implements OnInit {
   textAlignment: String = 'left';
   @Input()
   lineId: String;
-  summaryVisible: boolean;
+  public state = 'start';
 
   constructor(private animationManager: ProjectAnimationStateManager) { }
 
@@ -36,7 +37,7 @@ export class ProjectSummaryComponent implements OnInit {
 
     this.animationManager.onVisible().subscribe(val => {
         if (val === this.lineId) {
-          this.summaryVisible = true;
+          this.state = 'expanded';
         }
       }
     );

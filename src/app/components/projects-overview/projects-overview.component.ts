@@ -12,7 +12,6 @@ import {selectProjects} from "../../store/selectors/project.selectors";
 })
 export class ProjectsOverviewComponent implements OnInit {
   projects: Project[];
-  customImageUrl = '\'./../../assets/img/stars.jpg\'';
 
   constructor(private store: Store<AppState>) {
 
