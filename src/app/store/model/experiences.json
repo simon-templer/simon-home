@@ -22,5 +22,13 @@
   {
     "title": "Intellij",
     "percentage": 100
+  },
+  {
+    "title": "BPMN / Camunda",
+    "percentage": 60
+  },
+  {
+    "title": "GIT",
+    "percentage": 100
   }
 ]
