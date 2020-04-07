@@ -51,5 +51,35 @@ p {
   padding-bottom: 8em;
 }
 
+
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+  font-family: 'Akkurat';
+  src: url('./assets/fonts/Akkurat.ttf') format('truetype'),
+}
+
+h1, h2, h3, p, div, button {
+  font-family: Akkurat, sans-serif;
+}
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Akkurat',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
+@include mat-base-typography($custom-typography);
+
+// Override typography for a specific Angular Material components.
+@include mat-checkbox-typography($custom-typography);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($custom-typography);
+
+// Override the typography in the core CSS.
+@include mat-core($custom-typography);
+
+
