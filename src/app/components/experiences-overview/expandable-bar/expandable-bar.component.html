@@ -1,6 +1,6 @@
-<div fxLayout="row" fxLayoutAlign="center center">
-  <div fxFlex="10">
-    <p>{{experience.title}}</p>
+<div fxLayout="row" style="padding: 1.5em" fxLayoutGap="3em" fxLayoutAlign="center center">
+  <div fxFlex="10"  >
+    <div>{{experience.title}}</div>
   </div>
   <div fxFlex>
     <div  class="box"
@@ -9,7 +9,7 @@
          ></div>
   </div>
   <div fxFlex="10">
-    <p [@FadeIn]="fadInState">{{experience.percentage}}%</p>
+    <div [@FadeIn]="fadInState">{{experience.percentage}}%</div>
   </div>
 </div>
 
