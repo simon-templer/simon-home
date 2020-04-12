@@ -24,8 +24,12 @@
     "percentage": 100
   },
   {
-    "title": "BPMN / Camunda",
+    "title": "BPMN",
     "percentage": 60
+  },
+  {
+    "title": "Camunda",
+    "percentage": 50
   },
   {
     "title": "GIT",
