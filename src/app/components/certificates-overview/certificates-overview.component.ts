@@ -1,9 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Observable} from 'rxjs';
-import {select,Store} from '@ngrx/store';
-import {AppState} from '../../store/state/app.state';
+import {Component, Input, OnInit} from '@angular/core';
 import {Certificate} from '../../store/model/certificate';
-import {selectCertificates} from "../../store/selectors/certificates.selectors";
 
 @Component({
   selector: 'app-certificates-overview',
@@ -11,15 +7,11 @@ import {selectCertificates} from "../../store/selectors/certificates.selectors";
   styleUrls: ['./certificates-overview.component.scss']
 })
 export class CertificatesOverviewComponent implements OnInit {
+  @Input()
+  certificates: Certificate[];
 
-  certificates: Observable<Certificate[]>;
+  constructor() {}
 
-  constructor(private store: Store<AppState>) {
-
-  }
-
-  ngOnInit() {
-    this.certificates = this.store.pipe(select(selectCertificates));
-  }
+  ngOnInit() {}
 
 }

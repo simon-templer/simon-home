@@ -1,0 +1,15 @@
+img {
+  max-width: 100%;
+  max-height: 50%;
+
+}
+
+::ng-deep .mat-card {
+  padding: 0 !important;
+  /* styles here */
+}
+
+::ng-deep .mat-card-image {
+  margin: 0 !important;
+  /* styles here */
+}

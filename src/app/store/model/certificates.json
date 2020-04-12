@@ -1,34 +1,34 @@
 [
   {
     "order": 1,
-    "year": "2018",
+    "year": "Oktober 2018",
     "location": "SEI - Stuttgart",
     "title": "iSAQB Software Architecture Advanced: Module IMPROVE",
-    "image": "./../../assets/img/isaqb_logo.png",
+    "image": "./../../assets/img/CPSA-A.png",
     "description": "Teilnehmer lernen hier, Softwaresysteme und -architekturen anhand ökonomischer\nund technischer Ziele systematisch und methodisch zu verbessern. Dazu vermitteln\nentsprechende Schulungen die systematische Trennung von Problemen und Lösungsansätzen, das Erarbeiten von kurz-/mittel- und langfristigen Lösungsstrategien sowie\nderen Abgleich mit betriebswirtschaftlichen Zielen und Größen.\nZusätzlich zeigt der IMPROVE-Lehrplan typische Ansätze für Verbesserungen auf, beispielsweise Restrukturierungen und Refactoring, Verbesserungen der Analysierbarkeit, Prozessverbesserung, Verbesserung an technischer Infrastruktur, Verbesserung\nvon Qualitätseigenschaften, etc"
   },
   {
     "order": 2,
-    "year": "2018",
+    "year": "September 2018",
     "location": "Flowsphere - Zürich",
     "title": "SAFe Release Train Engineer",
-    "image": "./../../assets/img/flowsphere.png",
+    "image": "./../../assets/img/SAFe.png",
     "description": "In this advanced three-day workshop, you will gain an in-depth understanding of the role and responsibilities of a Release Train Engineer (RTE) in the SAFe enterprise. Through experiential learning, you will learn how to facilitate and enable end-to-end value delivery through Agile Release Trains (ARTs) and value streams.\n\nYou will also learn how to build a high-performing ART by becoming a servant leader and coach, and how to plan and execute a Program Increment (PI) planning event, the primarily enabler of alignment throughout all levels of a SAFe organization.\n\nScaled Agile’s SAFe Release Train Engineer exam maintains rigorous quality standards ensuring that those who have earned the certification are well prepared to effectively fulfill their role in a SAFe enterprise. Make sure to read the Certification Information below."
   },
   {
     "order": 3,
-    "year": "2017",
+    "year": "Februar 2017",
     "location": "Scrum.org",
     "title": "Professional Scrum Master",
-    "image": "./../../assets/img/scrum-org.png",
+    "image": "./../../assets/img/Scrum.png",
     "description": "People who have passed PSM I, achieving certification, demonstrate a fundamental level of Scrum mastery. PSM I certificate holders prove that they understand Scrum as described in the Scrum Guide and how to apply Scrum in Scrum Teams.  PSM I holders have a consistent terminology and approach to Scrum."
   },
   {
     "order": 4,
-    "year": "2017",
+    "year": "Oktober 2017",
     "location": "SEI - Zürich",
     "title": "iSAQB Software Architecture Advanced: Modul FLEX",
-    "image": "./../../assets/img/isaqb_logo.png",
+    "image": "./../../assets/img/CPSA-A.png",
     "description": "FLEX ist ein Advanced Modul der iSAQB Zertifizierung für Software-Architekten (CPSA-A). Anforderungen an Software ändern sich immer schneller - darauf muss die Architektur reagieren können und zukünftigen Anforderungen gewachsen sein. Dieses sehr praxisorientierte Seminar zeigt Ihnen auf, wie Sie flexible, dynamikrobuste Architekturen erstellen können, die ein schnelles Deployment und unmittelbares Feedback aus der Anwendung des Systems erlauben."
   },
   {
@@ -36,23 +36,23 @@
     "year": "2016",
     "location": "SEI - Zürich",
     "title": "iSAQB - Foundation Level",
-    "image": "./../../assets/img/isaqb_logo.png",
+    "image": "./../../assets/img/CPSA-F.png",
     "description": "In diesem 3-tägigen sehr interaktiven Training erwarten Sie eine fundierte, praxisnahe und pragmatische Einführung in Software Architektur. Der Fokus liegt auf methodischem und systematischem Vorgehen bei Architekturentwurf und -bewertung. Sie lernen das methodische Handwerkszeug erfolgreicher Architekten kennen. Mit einer angeleiteten Kursvorbereitung stellen wir sicher, dass wir während den Kurstagen vorwiegend auf praktische und individuelle Situationen fokussieren können."
   },
   {
     "order": 6,
-    "year": "2017",
+    "year": "Juni 2017",
     "location": "The Code Campus - Stuttgart",
     "title": "Angular Certification",
-    "image": "./../../assets/img/code-campus-icon.png",
+    "image": "./../../assets/img/Angular.png",
     "description": "In der Angular Schulung wird den Teilnehmern die Grundlage für einen schnellen Start in den Produktiveinsatz vermittelt. Anhand praktischer Beispiele lernen Sie zunächst die notwendigen TypeScript Grundlagen kennen. Anschließend lernen Sie die wichtigsten Konzepte von Angular kennen, theoretisch wie praktisch.\n\nAuf die Erklärung eines Konzepts folgt die Übung anhand einer Anwendung, die uns die ganze Schulung über begleitet. So kann jeder Teilnehmer mit seinem Code arbeiten und das gerade gelernte direkt umsetzten.\n\nNach dem Workshop kennen Sie die grundlegenen Konzepte von Angular. Sie sind in der Lage in komplexen Angular Anwendungen mitzuarbeiten. Dazu haben Sie die Grundlage geschaffen, sich tiefer in Angular einzuarbeiten."
   },
   {
     "order": 7,
-    "year": "2019",
+    "year": "Oktober 2019",
     "location": "Integrata CEGOS - Stuttgart",
     "title": "iSAQB - SOFT",
-    "image": "./../../assets/img/Logo-Integrata-Cegos.png",
+    "image": "./../../assets/img/CPSA-A.png",
     "description": "In diesem 3-tägigen sehr interaktiven Training erwarten Sie eine fundierte, praxisnahe und pragmatische Einführung in Software Architektur. Der Fokus liegt auf methodischem und systematischem Vorgehen bei Architekturentwurf und -bewertung. Sie lernen das methodische Handwerkszeug erfolgreicher Architekten kennen. Mit einer angeleiteten Kursvorbereitung stellen wir sicher, dass wir während den Kurstagen vorwiegend auf praktische und individuelle Situationen fokussieren können."
   }
 ]

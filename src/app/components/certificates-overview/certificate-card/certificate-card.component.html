@@ -1,0 +1,15 @@
+<mat-card style="margin: 2em;">
+  <div fxLayout="column" fxLayoutGap="0.7em" style="padding-bottom: 0.5em">
+    <div style="overflow: hidden;">
+      <img mat-card-image src="{{certificate.image}}"
+           (mouseenter) ="mouseEnter('div a') "
+           (mouseleave) ="mouseLeave('div A')"
+           [@zoomAnimation]="expandState">
+    </div>
+    <h4  style="padding-left:  0.5em">{{certificate.title}}</h4>
+    <div fxflex fxLayout="row" style="padding-left:  0.5em">
+      <h5 fxFlex="80">{{certificate.location}}</h5>
+      <h5 fxFlex>{{certificate.year}} </h5>
+    </div>
+  </div>
+</mat-card>
