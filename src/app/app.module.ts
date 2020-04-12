@@ -34,6 +34,7 @@ import {CertificatesOverviewComponent} from './components/certificates-overview/
 import {AngularFullpageModule} from '@fullpage/angular-fullpage';
 import {appReducers} from "./store/reducer/app.reducers";
 import { HomeComponent } from './components/home/home.component';
+import {CertificateCardComponent} from "./components/certificates-overview/certificate-card/certificate-card.component";
 
 library.add(faLinkedin);
 
@@ -60,6 +61,7 @@ export function createTranslateLoader(http: HttpClient) {
     CircleComponent,
     ProjectRowComponent,
     HomeComponent,
+    CertificateCardComponent
   ],
   imports: [
     TranslateModule.forRoot({

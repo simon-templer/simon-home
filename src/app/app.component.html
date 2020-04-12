@@ -4,11 +4,14 @@
 
   <app-header></app-header>
 
-  <div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
+  <div fullpage id="fullpage" [options]="config" (ref)="getRef($event)" >
     <app-home class="section" [customImageUrl]="home" ></app-home>
     <app-experiences-overview class="section"></app-experiences-overview>
     <app-projects-overview class="section"></app-projects-overview>
-    <app-certificates-overview class="section"></app-certificates-overview>
+    <div class="section" >
+      <app-certificates-overview *ngFor="let certificate of splitCertificates" [certificates]="certificate"  class="slide" ></app-certificates-overview>
+    </div>
+
     <app-contact class="section"></app-contact>
 
   </div>
